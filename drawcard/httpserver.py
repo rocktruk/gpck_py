@@ -80,17 +80,17 @@ if __name__ == '__main__':
     parser.add_argument(
         "--classes_file",
         type=str,
-        default="/Users/kaka_lijian/PycharmProjects/craw/uricatch/tfrecords/eval.tfrecord.classes",
+        default="rnn/eval.tfrecord.classes",
         help="Path to a file with the classes - one class per line")
     parser.add_argument(
         "--model_dir",
         type=str,
-        default="/Users/kaka_lijian/PycharmProjects/craw/uricatch/train",
+        default="rnn",
         help="Path for storing the model checkpoints.")
     parser.add_argument(
         "--predict_data",
         type=str,
-        default="/app/predict.tfrecord",
+        default="predict/predict.tfrecord",
         help="Path to evaluation data (tf.Example in TFRecord format)")
     parser.add_argument(
         "--log_level",
