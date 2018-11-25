@@ -9,6 +9,8 @@ import logging as log
 import argparse
 import uuid
 from drawcard.drawPredict import Predict
+import sys
+
 
 HOST_NAME = '127.0.0.1'
 PORT_NUMBER = 8080
@@ -76,6 +78,7 @@ class HttpHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(20000)
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--classes_file",

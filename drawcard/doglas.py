@@ -56,6 +56,7 @@ class Douglas(object):
         if (n == m + 1 or n == m):
             return
         # 计算中间点到直线的距离
+        logging.info('m:%d,n:%d'%(m,n))
         for i in range(m + 1, n):
             d = abs(A * points[i].y + B * points[i].x + C) / math.sqrt(math.pow(A, 2) + math.pow(B, 2))
             # array_longi = np.array([B, A])
@@ -78,7 +79,7 @@ class Douglas(object):
                 points.remove(item)
         else:
             index = distance.index(dmax)
-            middle = points[m:][index]
+            middle = points[m:][index+1]
             self.compress(points,p1, middle)
             self.compress(points,middle, p2)
 
